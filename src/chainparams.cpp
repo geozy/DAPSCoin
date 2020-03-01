@@ -209,7 +209,7 @@ public:
         txNew.vout[0].scriptPubKey = CScript() << ParseHex("041db2a1b75bc00fc1a18e9f8de27c65fede32eb9ac1c11e2587402a66732656d71f7b5de649c8dc7f94aeb433485ce3122ba856644b02e433c2d5fc94ea26bf8e") << OP_CHECKSIG;
         genesis.vtx.push_back(txNew);
         genesis.hashPrevBlock = 0;
-        genesis.hashMerkleRoot = genesis.BuildMerkleTree();
+        genesis.hashMerkleRoot = genesis.ComputeMerkleRoot();
         genesis.nVersion = 1;
         genesis.nTime = 1569750052; //09/29/2019 @ 9:40am (UTC)
         genesis.nBits = 0x1e0ffff0;
